@@ -8,10 +8,15 @@
 #include "parse.h"
 
 void print_usage(char* argv[]) {
-	printf("Usage: %s -n -f <db file>\n", argv[0]);
-	printf("\t -a -- add new employee\n");
-	printf("\t -n -- create new db file\n");
-	printf("\t -f -- (required) path to datbase file\n");
+	printf("Usage: %s -f <filename.db> \n", argv[0]);
+	printf("\t -f                            -- (required) path to datbase file\n");
+	printf("\t -n                            -- create new db file\n");
+	printf("\t -l                            -- list employees\n");
+	printf("\t -a '<name>,<address>,<hours>' -- add new employee\n");
+	printf("\t -A <filename>                 -- add new employees from a file\n");
+	printf("\t -r '<name>'                   -- remove employee by name\n");
+	printf("\t -u '<name>,<hours(int)>'      -- update an employees hours by name\n");
+
 }
 
 int main(int argc, char* argv[]) {
